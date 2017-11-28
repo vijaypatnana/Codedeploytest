@@ -1,4 +1,4 @@
 #!/bin/bash
 service httpd stop
-aws s3 cp s3://codedeploytrialbucket/dev/hello-world.war /tmp
-cp /tmp/hello-world.war /var/www/html/hello-world.war
+aws s3 cp s3://codedeploytrialbucket/dev/index.html /tmp
+cp /tmp/index.html /var/www/html/index.html
