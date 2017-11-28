@@ -1,4 +1,6 @@
 #!/bin/bash
 service httpd stop
-aws s3 cp s3://codedeploytrialbucket/dev/index.html /tmp
-cp /tmp/index.html /var/www/html/index.html
+aws s3 cp s3://codedeploytrialbucket/dev/index.zip /tmp
+cd /tmp; unzip index.zip
+rm -rf index.zip
+mv /tmp/index.html /var/www/html/index.html
